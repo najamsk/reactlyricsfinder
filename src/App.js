@@ -3,11 +3,14 @@ import Navbar from './components/layout/Navbar';
 import Index from './components/layout/Index';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+import {Provider} from './context';
+
 
 import './App.css';
 
 function App() {
     return (
+        <Provider>
         <Router>
             <React.Fragment>
                 <Navbar/>
@@ -18,6 +21,7 @@ function App() {
                 </div>
             </React.Fragment>
         </Router>
+        </Provider>
   );
 }
 
